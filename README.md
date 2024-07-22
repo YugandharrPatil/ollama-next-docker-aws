@@ -1,7 +1,3 @@
-### why doesn't the deployment link work?
-
-continue reading...
-
 ### what is it?
 
 unlimited chat with Meta AI's Llama3 8b model.
@@ -15,11 +11,3 @@ because the project is hosted on vercel, the hobby plan just has a serverless fu
 ### why is it super slow?
 
 LLMs need GPUs to crank out stuff(at a reasonable speed), but the computer i'm renting doesn't have one. (sponsor? 👉👈, just kidding)
-
-### how to use?
-
-for now, just git clone and run it on your localhost...
-
-### this is such a shit project
-
-i'm planning to package it as a docker container and use express in the backend so that the API call isn't serverless but serverfull, but let's see...
