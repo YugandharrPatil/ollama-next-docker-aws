@@ -1,36 +1,25 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+### why doesn't the deployment link work?
 
-## Getting Started
+continue reading...
 
-First, run the development server:
+### what is it?
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+unlimited chat with Meta AI's Llama3 8b model.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### how does it work?
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+it's basically a self-hosted docker container in the cloud with llama3 available with a port open for communication(container port forwarded to server's port). the next app connects to this listening port and sends API calls.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+because the project is hosted on vercel, the hobby plan just has a serverless function invocation time limit of 5s. therefore, my slow ass GPUless server struggles to generate words at pace, leading to a bad 504 bad gateway...(fixes are welcome)
 
-## Learn More
+### why is it super slow?
 
-To learn more about Next.js, take a look at the following resources:
+LLMs need GPUs to crank out stuff(at a reasonable speed), but the computer i'm renting doesn't have one. (sponsor? 👉👈, just kidding)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### how to use?
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+for now, just git clone and run it on your localhost...
 
-## Deploy on Vercel
+### this is such a shit project
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+i'm planning to package it as a docker container and use express in the backend so that the API call isn't serverless but serverfull, but let's see...
